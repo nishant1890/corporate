@@ -1,0 +1,2 @@
+json.extract! owner_salary_component, :id, :owner_salary, :owner_commission, :spouse_salary, :spouse_commission, :start_date, :end_date, :company_id, :created_at, :updated_at
+json.url owner_salary_component_url(owner_salary_component, format: :json)

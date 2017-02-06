@@ -1,0 +1,2 @@
+class ErpOperatingExpense < ApplicationRecord
+end

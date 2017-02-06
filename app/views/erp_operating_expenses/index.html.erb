@@ -1,0 +1,53 @@
+ 
+
+<h1>Erp Operating Expenses</h1>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Paycheck</th>
+      <th>Insurance</th>
+      <th>Office</th>
+      <th>Utilities</th>
+      <th>Internet</th>
+      <th>Phone</th>
+      <th>Rt</th>
+      <th>Salesforce</th>
+      <th>Sf admin</th>
+      <th>Sms magic</th>
+      <th>Lindexed</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Company</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @erp_operating_expenses.each do |erp_operating_expense| %>
+      <tr>
+        <td><%= erp_operating_expense.paycheck %></td>
+        <td><%= erp_operating_expense.insurance %></td>
+        <td><%= erp_operating_expense.office %></td>
+        <td><%= erp_operating_expense.utilities %></td>
+        <td><%= erp_operating_expense.internet %></td>
+        <td><%= erp_operating_expense.phone %></td>
+        <td><%= erp_operating_expense.rt %></td>
+        <td><%= erp_operating_expense.salesforce %></td>
+        <td><%= erp_operating_expense.sf_admin %></td>
+        <td><%= erp_operating_expense.sms_magic %></td>
+        <td><%= erp_operating_expense.lindexed %></td>
+        <td><%= erp_operating_expense.start_date %></td>
+        <td><%= erp_operating_expense.end_date %></td>
+        <td><%= erp_operating_expense.company_id %></td>
+        <td><%= link_to 'Show', erp_operating_expense %></td>
+        <td><%= link_to 'Edit', edit_erp_operating_expense_path(erp_operating_expense) %></td>
+        <td><%= link_to 'Destroy', erp_operating_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<hr /><%= link_to 'New Erp Operating Expense', new_erp_operating_expense_path %>

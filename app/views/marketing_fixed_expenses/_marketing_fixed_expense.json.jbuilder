@@ -1,0 +1,2 @@
+json.extract! marketing_fixed_expense, :id, :southwest, :west_coast, :midwest, :new_england, :south_east, :sober_recover, :easy_breeze, :addiction_advisor, :visible, :air_time, :rehabs_hq, :drug_use_today, :facebook, :start_date, :end_date, :company_id, :created_at, :updated_at
+json.url marketing_fixed_expense_url(marketing_fixed_expense, format: :json)

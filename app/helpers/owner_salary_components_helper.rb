@@ -1,0 +1,2 @@
+module OwnerSalaryComponentsHelper
+end

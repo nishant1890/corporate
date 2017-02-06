@@ -1,0 +1,39 @@
+ 
+
+<h1>Owner Salary Components</h1>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Owner salary</th>
+      <th>Owner commission</th>
+      <th>Spouse salary</th>
+      <th>Spouse commission</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Company</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owner_salary_components.each do |owner_salary_component| %>
+      <tr>
+        <td><%= owner_salary_component.owner_salary %></td>
+        <td><%= owner_salary_component.owner_commission %></td>
+        <td><%= owner_salary_component.spouse_salary %></td>
+        <td><%= owner_salary_component.spouse_commission %></td>
+        <td><%= owner_salary_component.start_date %></td>
+        <td><%= owner_salary_component.end_date %></td>
+        <td><%= owner_salary_component.company_id %></td>
+        <td><%= link_to 'Show', owner_salary_component %></td>
+        <td><%= link_to 'Edit', edit_owner_salary_component_path(owner_salary_component) %></td>
+        <td><%= link_to 'Destroy', owner_salary_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<hr /><%= link_to 'New Owner Salary Component', new_owner_salary_component_path %>

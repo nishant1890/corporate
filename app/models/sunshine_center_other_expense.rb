@@ -1,0 +1,2 @@
+class SunshineCenterOtherExpense < ApplicationRecord
+end

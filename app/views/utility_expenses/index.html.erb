@@ -1,0 +1,55 @@
+ 
+
+<h1>Utility Expenses</h1>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Cable</th>
+      <th>Gas</th>
+      <th>Electric</th>
+      <th>Water</th>
+      <th>Food</th>
+      <th>Yoga</th>
+      <th>Acupunture</th>
+      <th>Auto</th>
+      <th>Fuel</th>
+      <th>Landscaping</th>
+      <th>Cleaning</th>
+      <th>Total per house</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Company</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @utility_expenses.each do |utility_expense| %>
+      <tr>
+        <td><%= utility_expense.cable %></td>
+        <td><%= utility_expense.gas %></td>
+        <td><%= utility_expense.electric %></td>
+        <td><%= utility_expense.water %></td>
+        <td><%= utility_expense.food %></td>
+        <td><%= utility_expense.yoga %></td>
+        <td><%= utility_expense.acupunture %></td>
+        <td><%= utility_expense.auto %></td>
+        <td><%= utility_expense.fuel %></td>
+        <td><%= utility_expense.landscaping %></td>
+        <td><%= utility_expense.cleaning %></td>
+        <td><%= utility_expense.total_per_house %></td>
+        <td><%= utility_expense.start_date %></td>
+        <td><%= utility_expense.end_date %></td>
+        <td><%= utility_expense.company_id %></td>
+        <td><%= link_to 'Show', utility_expense %></td>
+        <td><%= link_to 'Edit', edit_utility_expense_path(utility_expense) %></td>
+        <td><%= link_to 'Destroy', utility_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<hr /><%= link_to 'New Utility Expense', new_utility_expense_path %>

@@ -1,0 +1,2 @@
+json.extract! erp_operating_expense, :id, :paycheck, :insurance, :office, :utilities, :internet, :phone, :rt, :salesforce, :sf_admin, :sms_magic, :lindexed, :start_date, :end_date, :company_id, :created_at, :updated_at
+json.url erp_operating_expense_url(erp_operating_expense, format: :json)

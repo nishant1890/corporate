@@ -12,36 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :company_name %>
-    <%= f.text_field :company_name %>
-  </div>
-
-  <div class="field">
     <%= f.label :type_of_revenue %>
-    <%= f.text_field :type_of_revenue %>
+    <%= f.text_field :type_of_revenue, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :number_of_deals %>
-    <%= f.text_field :number_of_deals %>
+    <%= f.text_field :number_of_deals, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :amount %>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.text_field :date %>
+    <%= f.date_field :date, class: 'form-control' %>
+    <br />
   </div>
 
-  <div class="field">
-    <%= f.label :company_id %>
-    <%= f.text_field :company_id %>
-  </div>
+  <%= hidden_field_tag 'revenue[company_id]', current_user.company_id %>
 
   <div class="actions">
-    <%= f.submit %>
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
   </div>
 <% end %>

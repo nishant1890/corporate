@@ -1,0 +1,64 @@
+<center><h1>Revenues &amp; Expenses</h1></center>
+<hr />
+
+<h2>Expenses Month Wise</h2>
+
+<p>
+  <strong>January:</strong>
+  <%= current_user.company.calculate_month_expenses('01', params[:year]) %>
+</p>
+
+<p>
+  <strong>Feburary:</strong>
+  <%= current_user.company.calculate_month_expenses('02', params[:year]) %>
+</p>
+
+<p>
+  <strong>March:</strong>
+  <%= current_user.company.calculate_month_expenses('03', params[:year]) %>
+</p>
+
+<p>
+  <strong>April:</strong>
+  <%= current_user.company.calculate_month_expenses('04', params[:year]) %>
+</p>
+
+<p>
+  <strong>May:</strong>
+  <%= current_user.company.calculate_month_expenses('05', params[:year]) %>
+</p>
+
+<p>
+  <strong>June:</strong>
+  <%= current_user.company.calculate_month_expenses('06', params[:year]) %>
+</p>
+
+<p>
+  <strong>July:</strong>
+  <%= current_user.company.calculate_month_expenses('07', params[:year]) %>
+</p>
+
+<p>
+  <strong>August:</strong>
+  <%= current_user.company.calculate_month_expenses('08', params[:year])%>
+</p>
+
+<p>
+  <strong>September:</strong>
+  <%= current_user.company.calculate_month_expenses('09', params[:year])%>
+</p>
+
+<p>
+  <strong>October:</strong>
+  <%= current_user.company.calculate_month_expenses('10', params[:year]) %>
+</p>
+
+<p>
+  <strong>November:</strong>
+  <%= current_user.company.calculate_month_expenses('11', params[:year]) %>
+</p>
+
+<p>
+  <strong>December:</strong>
+  <%= current_user.company.calculate_month_expenses('12', params[:year]) %>
+</p>

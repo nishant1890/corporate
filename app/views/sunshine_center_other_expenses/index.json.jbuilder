@@ -1,0 +1,1 @@
+json.array! @sunshine_center_other_expenses, partial: 'sunshine_center_other_expenses/sunshine_center_other_expense', as: :sunshine_center_other_expense

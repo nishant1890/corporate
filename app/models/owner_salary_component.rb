@@ -1,0 +1,2 @@
+class OwnerSalaryComponent < ApplicationRecord
+end

@@ -1,0 +1,1 @@
+json.array! @marketing_fixed_expenses, partial: 'marketing_fixed_expenses/marketing_fixed_expense', as: :marketing_fixed_expense

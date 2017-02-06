@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202222938) do
+ActiveRecord::Schema.define(version: 20170206123254) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +28,25 @@ ActiveRecord::Schema.define(version: 20170202222938) do
     t.string   "total_lease_amount"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "erp_operating_expenses", force: :cascade do |t|
+    t.integer  "paycheck",   default: 0
+    t.integer  "insurance",  default: 0
+    t.integer  "office",     default: 0
+    t.integer  "utilities",  default: 0
+    t.integer  "internet",   default: 0
+    t.integer  "phone",      default: 0
+    t.integer  "rt",         default: 0
+    t.integer  "salesforce", default: 0
+    t.integer  "sf_admin",   default: 0
+    t.integer  "sms_magic",  default: 0
+    t.integer  "lindexed",   default: 0
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "expenses", force: :cascade do |t|
@@ -51,14 +70,68 @@ ActiveRecord::Schema.define(version: 20170202222938) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "marketing_fixed_expenses", force: :cascade do |t|
+    t.integer  "southwest",         default: 0
+    t.integer  "west_coast",        default: 0
+    t.integer  "midwest",           default: 0
+    t.integer  "new_england",       default: 0
+    t.integer  "south_east",        default: 0
+    t.integer  "sober_recover",     default: 0
+    t.integer  "easy_breeze",       default: 0
+    t.integer  "addiction_advisor", default: 0
+    t.integer  "visible",           default: 0
+    t.integer  "air_time",          default: 0
+    t.integer  "rehabs_hq",         default: 0
+    t.integer  "drug_use_today",    default: 0
+    t.integer  "facebook",          default: 0
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "owner_salary_components", force: :cascade do |t|
+    t.integer  "owner_salary",      default: 0
+    t.integer  "owner_commission",  default: 0
+    t.integer  "spouse_salary",     default: 0
+    t.integer  "spouse_commission", default: 0
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
   create_table "revenues", force: :cascade do |t|
     t.string   "company_name"
     t.string   "type_of_revenue"
     t.string   "number_of_deals"
-    t.string   "amount"
-    t.string   "date"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "amount",          default: 0
+    t.date     "date"
+    t.integer  "company_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "sunshine_center_other_expenses", force: :cascade do |t|
+    t.integer  "hosting",              default: 0
+    t.integer  "blogging",             default: 0
+    t.integer  "facebook",             default: 0
+    t.integer  "liability_insurance",  default: 0
+    t.integer  "heath_insurance",      default: 0
+    t.integer  "detox",                default: 0
+    t.integer  "workers_compensation", default: 0
+    t.integer  "fica",                 default: 0
+    t.integer  "office_supplies",      default: 0
+    t.integer  "cort",                 default: 0
+    t.integer  "kipu",                 default: 0
+    t.integer  "miscellaneous",        default: 0
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,8 +148,30 @@ ActiveRecord::Schema.define(version: 20170202222938) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "company_id"
+    t.string   "permission"
+    t.boolean  "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "utility_expenses", force: :cascade do |t|
+    t.integer  "cable",           default: 0
+    t.integer  "gas",             default: 0
+    t.integer  "electric",        default: 0
+    t.integer  "water",           default: 0
+    t.integer  "food",            default: 0
+    t.integer  "yoga",            default: 0
+    t.integer  "acupunture",      default: 0
+    t.integer  "auto",            default: 0
+    t.integer  "fuel",            default: 0
+    t.integer  "landscaping",     default: 0
+    t.integer  "cleaning",        default: 0
+    t.integer  "total_per_house", default: 0
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "company_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

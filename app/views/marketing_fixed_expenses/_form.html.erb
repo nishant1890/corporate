@@ -1,0 +1,109 @@
+<%= form_for(marketing_fixed_expense) do |f| %>
+  <% if marketing_fixed_expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(marketing_fixed_expense.errors.count, "error") %> prohibited this marketing_fixed_expense from being saved:</h2>
+
+      <ul>
+      <% marketing_fixed_expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :southwest %>
+    <%= f.text_field :southwest, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :west_coast %>
+    <%= f.text_field :west_coast, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :midwest %>
+    <%= f.text_field :midwest, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :new_england %>
+    <%= f.text_field :new_england, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :south_east %>
+    <%= f.text_field :south_east, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :sober_recover %>
+    <%= f.text_field :sober_recover, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :easy_breeze %>
+    <%= f.text_field :easy_breeze, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :addiction_advisor %>
+    <%= f.text_field :addiction_advisor, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :visible %>
+    <%= f.text_field :visible, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :air_time %>
+    <%= f.text_field :air_time, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :rehabs_hq %>
+    <%= f.text_field :rehabs_hq, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :drug_use_today %>
+    <%= f.text_field :drug_use_today, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <%= hidden_field_tag 'marketing_fixed_expense[company_id]', current_user.company_id %>
+
+  <div class="actions">
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
+  </div>
+<% end %>

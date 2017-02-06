@@ -1,0 +1,1 @@
+json.partial! "sunshine_center_other_expenses/sunshine_center_other_expense", sunshine_center_other_expense: @sunshine_center_other_expense

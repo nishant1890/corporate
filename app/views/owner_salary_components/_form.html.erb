@@ -1,0 +1,55 @@
+<%= form_for(owner_salary_component) do |f| %>
+  <% if owner_salary_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(owner_salary_component.errors.count, "error") %> prohibited this owner_salary_component from being saved:</h2>
+
+      <ul>
+      <% owner_salary_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :owner_salary %>
+    <%= f.text_field :owner_salary, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :owner_commission %>
+    <%= f.text_field :owner_commission, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :spouse_salary %>
+    <%= f.text_field :spouse_salary, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :spouse_commission %>
+    <%= f.text_field :spouse_commission, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <%= hidden_field_tag 'owner_salary_component[company_id]', current_user.company_id %>
+
+  <div class="actions">
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
+  </div>
+<% end %>

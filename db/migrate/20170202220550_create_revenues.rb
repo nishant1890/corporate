@@ -4,8 +4,8 @@ class CreateRevenues < ActiveRecord::Migration[5.0]
       t.string :company_name
       t.string :type_of_revenue
       t.string :number_of_deals
-      t.string :amount
-      t.string :date
+      t.integer :amount, default: 0
+      t.date :date
       t.integer :company_id
 
       t.timestamps

@@ -1,4 +1,5 @@
 class CompanyLeaseInformationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_company_lease_information, only: [:show, :edit, :update, :destroy]
 
   # GET /company_lease_informations

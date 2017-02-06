@@ -1,0 +1,1 @@
+json.array! @utility_expenses, partial: 'utility_expenses/utility_expense', as: :utility_expense

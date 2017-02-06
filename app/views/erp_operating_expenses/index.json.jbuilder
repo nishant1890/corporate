@@ -1,0 +1,1 @@
+json.array! @erp_operating_expenses, partial: 'erp_operating_expenses/erp_operating_expense', as: :erp_operating_expense

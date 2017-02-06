@@ -1,0 +1,1 @@
+json.partial! "marketing_fixed_expenses/marketing_fixed_expense", marketing_fixed_expense: @marketing_fixed_expense

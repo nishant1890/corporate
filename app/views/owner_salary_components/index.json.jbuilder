@@ -1,0 +1,1 @@
+json.array! @owner_salary_components, partial: 'owner_salary_components/owner_salary_component', as: :owner_salary_component

@@ -1,0 +1,39 @@
+ 
+
+<p>
+  <strong>Owner salary:</strong>
+  <%= @owner_salary_component.owner_salary %>
+</p>
+
+<p>
+  <strong>Owner commission:</strong>
+  <%= @owner_salary_component.owner_commission %>
+</p>
+
+<p>
+  <strong>Spouse salary:</strong>
+  <%= @owner_salary_component.spouse_salary %>
+</p>
+
+<p>
+  <strong>Spouse commission:</strong>
+  <%= @owner_salary_component.spouse_commission %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @owner_salary_component.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @owner_salary_component.end_date %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @owner_salary_component.company_id %>
+</p>
+
+<hr /><%= link_to 'Edit', edit_owner_salary_component_path(@owner_salary_component) %> |
+<%= link_to 'Back', owner_salary_components_path %>

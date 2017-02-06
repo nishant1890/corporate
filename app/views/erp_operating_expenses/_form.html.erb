@@ -1,0 +1,97 @@
+<%= form_for(erp_operating_expense) do |f| %>
+  <% if erp_operating_expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(erp_operating_expense.errors.count, "error") %> prohibited this erp_operating_expense from being saved:</h2>
+
+      <ul>
+      <% erp_operating_expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paycheck %>
+    <%= f.text_field :paycheck, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :insurance %>
+    <%= f.text_field :insurance, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :office %>
+    <%= f.text_field :office, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :utilities %>
+    <%= f.text_field :utilities, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :internet %>
+    <%= f.text_field :internet, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :rt %>
+    <%= f.text_field :rt, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :salesforce %>
+    <%= f.text_field :salesforce, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :sf_admin %>
+    <%= f.text_field :sf_admin, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :sms_magic %>
+    <%= f.text_field :sms_magic, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :lindexed %>
+    <%= f.text_field :lindexed, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, class: 'form-control' %>
+    <br />
+  </div>
+
+  <%= hidden_field_tag 'erp_operating_expense[company_id]', current_user.company_id %>
+
+  <div class="actions">
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
+  </div>
+<% end %>

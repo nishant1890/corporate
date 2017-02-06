@@ -1,0 +1,2 @@
+class MarketingFixedExpense < ApplicationRecord
+end

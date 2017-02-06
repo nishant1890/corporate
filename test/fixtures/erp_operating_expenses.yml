@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paycheck: MyString
+  insurance: MyString
+  office: MyString
+  utilities: MyString
+  internet: MyString
+  phone: MyString
+  rt: MyString
+  salesforce: MyString
+  sf_admin: MyString
+  sms_magic: MyString
+  lindexed: MyString
+  start_date: 2017-02-06
+  end_date: 2017-02-06
+  company_id: 1
+
+two:
+  paycheck: MyString
+  insurance: MyString
+  office: MyString
+  utilities: MyString
+  internet: MyString
+  phone: MyString
+  rt: MyString
+  salesforce: MyString
+  sf_admin: MyString
+  sms_magic: MyString
+  lindexed: MyString
+  start_date: 2017-02-06
+  end_date: 2017-02-06
+  company_id: 1

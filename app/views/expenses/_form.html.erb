@@ -13,50 +13,55 @@
 
   <div class="field">
     <%= f.label :company_name %>
-    <%= f.text_field :company_name %>
+    <%= f.text_field :company_name, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.text_field :date %>
+    <%= f.text_field :date, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :amount %>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :payroll_type %>
-    <%= f.text_field :payroll_type %>
+    <%= f.text_field :payroll_type, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :search_engine %>
-    <%= f.text_field :search_engine %>
+    <%= f.text_field :search_engine, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :month %>
-    <%= f.text_field :month %>
+    <%= f.text_field :month, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :year %>
-    <%= f.text_field :year %>
+    <%= f.text_field :year, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :miscellaneous_expense_type %>
-    <%= f.text_field :miscellaneous_expense_type %>
+    <%= f.text_field :miscellaneous_expense_type, class: 'form-control' %>
+    <br />
   </div>
 
-  <div class="field">
-    <%= f.label :company_id %>
-    <%= f.text_field :company_id %>
-  </div>
+  <%= hidden_field_tag 'expense[company_id]', current_user.company_id %>
 
   <div class="actions">
-    <%= f.submit %>
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
   </div>
 <% end %>

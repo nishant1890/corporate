@@ -1,4 +1,5 @@
 class RevenuesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_revenue, only: [:show, :edit, :update, :destroy]
 
   # GET /revenues

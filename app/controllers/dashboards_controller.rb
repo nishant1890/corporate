@@ -1,6 +1,10 @@
 class DashboardsController < ApplicationController
   before_action :authenticate_user!
 
-  def company_landing_page
+  def expenses_n_revenues
+    
+  end
+
+  def landing_page
   end
 end

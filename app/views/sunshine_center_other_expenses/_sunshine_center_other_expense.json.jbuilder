@@ -1,0 +1,2 @@
+json.extract! sunshine_center_other_expense, :id, :hosting, :blogging, :facebook, :liability_insurance, :heath_insurance, :detox, :workers_compensation, :fica, :office_supplies, :cort, :kipu, :miscellaneous, :start_date, :end_date, :company_id, :created_at, :updated_at
+json.url sunshine_center_other_expense_url(sunshine_center_other_expense, format: :json)

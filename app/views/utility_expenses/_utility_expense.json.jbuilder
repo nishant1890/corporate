@@ -1,0 +1,2 @@
+json.extract! utility_expense, :id, :cable, :gas, :electric, :water, :food, :yoga, :acupunture, :auto, :fuel, :landscaping, :cleaning, :total_per_house, :start_date, :end_date, :company_id, :created_at, :updated_at
+json.url utility_expense_url(utility_expense, format: :json)
