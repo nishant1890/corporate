@@ -19,9 +19,8 @@ test:
 
 production:
   adapter: postgresql
-  host: ec2-23-21-100-145.compute-1.amazonaws.com
+  host: ec2-54-163-253-94.compute-1.amazonaws.com
   schema_search_path: public
-  database: d90t4r36b223f0
-  username: urhuulwzfatfif
-  password: '1-iW5yX0LPjTcJsgbpXNd8amEt'
-  url: <%= ENV['DATABASE_URL'] %>
+  database: d7tks39mld5v68
+  username: obykzwthssmotn
+  password: 'f7d8146495a46a4bfbaacf3df3fac4649cf2d8e7ad0e3b3beccc3d015b0768b4'
