@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: MyString
+  house_id: MyString
+  start_date: MyString
+  end_date: MyString
+  total_lease_amount: MyString
+
+two:
+  company_id: MyString
+  house_id: MyString
+  start_date: MyString
+  end_date: MyString
+  total_lease_amount: MyString

@@ -1,0 +1,2 @@
+class CompanyLeaseInformation < ApplicationRecord
+end

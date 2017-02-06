@@ -1,0 +1,2 @@
+json.extract! company_lease_information, :id, :house_id, :start_date, :end_date, :total_lease_amount, :company_id, :created_at, :updated_at
+json.url company_lease_information_url(company_lease_information, format: :json)

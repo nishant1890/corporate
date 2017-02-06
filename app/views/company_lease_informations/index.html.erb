@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Company Lease Informations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>House</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Total lease amount</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company_lease_informations.each do |company_lease_information| %>
+      <tr>
+        <td><%= company_lease_information.house_id %></td>
+        <td><%= company_lease_information.start_date %></td>
+        <td><%= company_lease_information.end_date %></td>
+        <td><%= company_lease_information.total_lease_amount %></td>
+        <td><%= company_lease_information.company_id %></td>
+        <td><%= link_to 'Show', company_lease_information %></td>
+        <td><%= link_to 'Edit', edit_company_lease_information_path(company_lease_information) %></td>
+        <td><%= link_to 'Destroy', company_lease_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company Lease Information', new_company_lease_information_path %>

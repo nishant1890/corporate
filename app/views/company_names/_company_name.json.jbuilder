@@ -1,0 +1,2 @@
+json.extract! company_name, :id, :date, :amount, :payroll_type, :search_engine, :month, :year, :miscellaneous_expense_type, :company_id, :created_at, :updated_at
+json.url company_name_url(company_name, format: :json)

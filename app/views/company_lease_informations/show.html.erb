@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>House:</strong>
+  <%= @company_lease_information.house_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @company_lease_information.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @company_lease_information.end_date %>
+</p>
+
+<p>
+  <strong>Total lease amount:</strong>
+  <%= @company_lease_information.total_lease_amount %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @company_lease_information.company_id %>
+</p>
+
+<%= link_to 'Edit', edit_company_lease_information_path(@company_lease_information) %> |
+<%= link_to 'Back', company_lease_informations_path %>

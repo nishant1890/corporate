@@ -1,0 +1,1 @@
+json.partial! "company_lease_informations/company_lease_information", company_lease_information: @company_lease_information

@@ -1,0 +1,1 @@
+json.array! @company_names, partial: 'company_names/company_name', as: :company_name

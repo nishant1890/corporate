@@ -1,0 +1,1 @@
+json.array! @company_lease_informations, partial: 'company_lease_informations/company_lease_information', as: :company_lease_information

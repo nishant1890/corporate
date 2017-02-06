@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  date: 2017-02-02
+  amount: MyString
+  payroll_type: MyString
+  search_engine: MyString
+  month: MyString
+  yearmiscellaneous_expense_type: MyString
+
+two:
+  company_name: MyString
+  date: 2017-02-02
+  amount: MyString
+  payroll_type: MyString
+  search_engine: MyString
+  month: MyString
+  yearmiscellaneous_expense_type: MyString
