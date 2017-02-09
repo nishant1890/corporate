@@ -1,0 +1,24 @@
+ 
+
+<p>
+  <strong>Company:</strong>
+  <%= @digital_marketing_data.company.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @digital_marketing_data.date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @digital_marketing_data.amount %>
+</p>
+
+<p>
+  <strong>Search engine:</strong>
+  <%= @digital_marketing_data.search_engine %>
+</p>
+
+<hr /><%= link_to 'Edit', edit_digital_marketing_data_path(@digital_marketing_data) %> |
+<%= link_to 'Back', digital_marketing_datas_path %>

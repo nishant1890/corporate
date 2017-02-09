@@ -1,0 +1,24 @@
+ 
+
+<p>
+  <strong>Company:</strong>
+  <%= @payroll_data.company.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @payroll_data.date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @payroll_data.amount %>
+</p>
+
+<p>
+  <strong>Payroll type:</strong>
+  <%= @payroll_data.payroll_type %>
+</p>
+
+<hr /><%= link_to 'Edit', edit_payroll_data_path(@payroll_data) %> |
+<%= link_to 'Back', payroll_datas_path %>

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :company_lease_informations
   resources :houses
   resources :revenues
-  resources :expenses
+  resources :payroll_datas
+  resources :digital_marketing_datas
+  resources :miscellaneous_expenses
   resources :companies
 
   devise_for :users

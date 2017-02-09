@@ -1,0 +1,40 @@
+<%= form_for(miscellaneous_expense, url: path, method: method) do |f| %>
+  <% if miscellaneous_expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(miscellaneous_expense.errors.count, "error") %> prohibited this miscellaneous_expense from being saved:</h2>
+      <ul>
+      <% miscellaneous_expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name, miscellaneous_expense.company_id), class: 'form-control' %>
+    <br /><br />
+  </div>
+  
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.number_field :year, class: 'form-control', maximum: 4, minimum: 4 %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :month %>
+    <%= f.text_field :month, class: 'form-control' %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :miscellaneous_expense_type %>
+    <%= f.select :miscellaneous_expense_type, options_for_select(['Travel', 'Gift Card', 'Miscellaneous'], @miscellaneous_expense.miscellaneous_expense_type), class: 'form-control' %>
+    <br /><br />
+  </div>
+  
+  <div class="actions">
+     <%= f.submit 'Submit', class: 'btn btn-success' %>
+  </div>
+<% end %>

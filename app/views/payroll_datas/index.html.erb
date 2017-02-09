@@ -1,0 +1,34 @@
+ 
+
+<h1>Payroll Data</h1>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Payroll type</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payroll_datas.each do |payroll_data| %>
+      <tr>
+        <td><%= payroll_data.company.name %></td>
+        <td><%= payroll_data.date %></td>
+        <td><%= payroll_data.amount %></td>
+        <td><%= payroll_data.payroll_type %></td>
+        
+        <td><%= link_to 'Show', payroll_data_path(payroll_data) %></td>
+        <td><%= link_to 'Edit', edit_payroll_data_path(payroll_data) %></td>
+        <td><%= link_to 'Destroy', payroll_data_path(payroll_data), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payroll Data', new_payroll_data_path %>

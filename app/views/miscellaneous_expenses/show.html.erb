@@ -1,0 +1,25 @@
+ 
+
+<p>
+  <strong>Company:</strong>
+  <%= @miscellaneous_expense.company.name %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @miscellaneous_expense.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @miscellaneous_expense.year %>
+</p>
+
+<p>
+  <strong>Miscellaneous expense type:</strong>
+  <%= @miscellaneous_expense.miscellaneous_expense_type %>
+</p>
+
+
+<hr /><%= link_to 'Edit', edit_miscellaneous_expense_path(@miscellaneous_expense) %> |
+<%= link_to 'Back', miscellaneous_expenses_path %>
