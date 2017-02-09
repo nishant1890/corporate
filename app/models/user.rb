@@ -3,5 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  belongs_to :company  
+  
+  belongs_to :company, -> { where admin: false }
+  validates :company_id, presence: true, if: '!admin?'
 end

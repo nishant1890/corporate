@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   resources :houses
   resources :revenues
   resources :expenses
+  resources :companies
+
   devise_for :users
   
+
   get '/expenses_n_revenues', to: 'dashboards#expenses_n_revenues', as: :expenses_n_revenues
   get '/landing_page', to: 'dashboards#landing_page'
   root 'dashboards#landing_page'
