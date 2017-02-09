@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   resources :companies
   resources :users
   
+  namespace :api do
+    namespace :v1 do
+      post '/revenues', to: 'revenues#create'
+    end
+  end    
 
   get '/expenses_n_revenues', to: 'dashboards#expenses_n_revenues', as: :expenses_n_revenues
   get '/landing_page', to: 'dashboards#landing_page'

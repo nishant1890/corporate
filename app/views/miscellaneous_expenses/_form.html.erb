@@ -24,8 +24,8 @@
 
   <div class="field">
     <%= f.label :month %>
-    <%= f.text_field :month, class: 'form-control' %>
-    <br />
+    <%= f.select :month, options_for_select(%w(Jan Feb March April May June July August Sept Oct Nov Dec), miscellaneous_expense.month), class: 'form-control' %>
+    <br /><br />
   </div>
 
   <div class="field">

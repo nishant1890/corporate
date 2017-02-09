@@ -19,12 +19,13 @@
           <% if current_user.admin? %>
             <li><a href="/expenses_n_revenues">Revenues &amp; Expenses</a></li>
           <% end %>
-          <% ['erp_operating_expenses','payroll_datas', 'digital_marketing_datas', 'miscellaneous_expenses'].each do |object| %>
+          <% ['payroll_datas', 'digital_marketing_datas', 'miscellaneous_expenses'].each do |object| %>
             <% if current_user.admin? || current_user.permission.include?("can_manage_#{object}") %>
               <li><%= link_to object.humanize, send("#{object}_path") %></li>
             <% end %>
           <% end %>  
-
+          <% if current_user.admin? || current_user.permission.include?("can_manage_marketing_fixed_expenses?") %>
+            <li><a href="/marketing_fixed_expenses"></a>ERP <%= 'marketing_fixed_expenses'.humanize %></li>
         </ul>
       <% end %>
       <ul class="nav navbar-nav navbar-right">
@@ -34,7 +35,7 @@
            <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configurations<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <% ['owner_salary_components', 'sunshine_center_other_expenses', 'utility_expenses', 'marketing_fixed_expenses', 'company_lease_informations', 'houses', 'revenues'].sort.each do |object| %>
+              <% ['erp_operating_expenses', 'owner_salary_components', 'sunshine_center_other_expenses', 'utility_expenses', 'company_lease_informations', 'houses', 'revenues'].sort.each do |object| %>
                 <% if current_user.permission.include?("can_manage_#{object}") || current_user.admin? %>
                   <li><%= link_to object.humanize, send("#{object}_path") %></li>
                 <% end %>
