@@ -25,7 +25,7 @@
             <% end %>
           <% end %>  
           <% if current_user.admin? || current_user.permission.include?("can_manage_marketing_fixed_expenses?") %>
-            <li><a href="/marketing_fixed_expenses"></a>ERP <%= 'marketing_fixed_expenses'.humanize %></li>
+            <li><a href="/marketing_fixed_expenses">ERP <%= 'marketing_fixed_expenses'.humanize %></a></li>
           <% end %>
         </ul>
       <% end %>
