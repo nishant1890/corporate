@@ -1,57 +1,57 @@
  
 
 <h1>Marketing Fixed Expenses</h1>
-
-<table class="table table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>Southwest</th>
-      <th>West coast</th>
-      <th>Midwest</th>
-      <th>New england</th>
-      <th>South east</th>
-      <th>Sober recover</th>
-      <th>Easy breeze</th>
-      <th>Addiction advisor</th>
-      <th>Visible</th>
-      <th>Air time</th>
-      <th>Rehabs hq</th>
-      <th>Drug use today</th>
-      <th>Facebook</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Company</th>
-      <th colspan="3">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @marketing_fixed_expenses.each do |marketing_fixed_expense| %>
+<div class="table-responsive">
+  <table class="table table-bordered table-responsive">
+    <thead>
       <tr>
-        <td><%= marketing_fixed_expense.southwest %></td>
-        <td><%= marketing_fixed_expense.west_coast %></td>
-        <td><%= marketing_fixed_expense.midwest %></td>
-        <td><%= marketing_fixed_expense.new_england %></td>
-        <td><%= marketing_fixed_expense.south_east %></td>
-        <td><%= marketing_fixed_expense.sober_recover %></td>
-        <td><%= marketing_fixed_expense.easy_breeze %></td>
-        <td><%= marketing_fixed_expense.addiction_advisor %></td>
-        <td><%= marketing_fixed_expense.visible %></td>
-        <td><%= marketing_fixed_expense.air_time %></td>
-        <td><%= marketing_fixed_expense.rehabs_hq %></td>
-        <td><%= marketing_fixed_expense.drug_use_today %></td>
-        <td><%= marketing_fixed_expense.facebook %></td>
-        <td><%= marketing_fixed_expense.start_date %></td>
-        <td><%= marketing_fixed_expense.end_date %></td>
-        <td><%= marketing_fixed_expense.company.try(:name) %></td>
-        <td><%= link_to 'Show', marketing_fixed_expense %></td>
-        <td><%= link_to 'Edit', edit_marketing_fixed_expense_path(marketing_fixed_expense) %></td>
-        <td><%= link_to 'Destroy', marketing_fixed_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Southwest</th>
+        <th>West coast</th>
+        <th>Midwest</th>
+        <th>New england</th>
+        <th>South east</th>
+        <th>Sober recover</th>
+        <th>Easy breeze</th>
+        <th>Addiction advisor</th>
+        <th>Visible</th>
+        <th>Air time</th>
+        <th>Rehabs hq</th>
+        <th>Drug use today</th>
+        <th>Facebook</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Company</th>
+        <th colspan="3">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @marketing_fixed_expenses.each do |marketing_fixed_expense| %>
+        <tr>
+          <td><%= marketing_fixed_expense.southwest %></td>
+          <td><%= marketing_fixed_expense.west_coast %></td>
+          <td><%= marketing_fixed_expense.midwest %></td>
+          <td><%= marketing_fixed_expense.new_england %></td>
+          <td><%= marketing_fixed_expense.south_east %></td>
+          <td><%= marketing_fixed_expense.sober_recover %></td>
+          <td><%= marketing_fixed_expense.easy_breeze %></td>
+          <td><%= marketing_fixed_expense.addiction_advisor %></td>
+          <td><%= marketing_fixed_expense.visible %></td>
+          <td><%= marketing_fixed_expense.air_time %></td>
+          <td><%= marketing_fixed_expense.rehabs_hq %></td>
+          <td><%= marketing_fixed_expense.drug_use_today %></td>
+          <td><%= marketing_fixed_expense.facebook %></td>
+          <td><%= marketing_fixed_expense.start_date %></td>
+          <td><%= marketing_fixed_expense.end_date %></td>
+          <td><%= marketing_fixed_expense.company.try(:name) %></td>
+          <td><%= link_to 'Show', marketing_fixed_expense %></td>
+          <td><%= link_to 'Edit', edit_marketing_fixed_expense_path(marketing_fixed_expense) %></td>
+          <td><%= link_to 'Destroy', marketing_fixed_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <hr /><%= link_to 'New Marketing Fixed Expense', new_marketing_fixed_expense_path %>
