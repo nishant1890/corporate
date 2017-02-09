@@ -1,9 +1,31 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= form_for(user, url: path, method: method) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name, user.company_id), class: 'form-control' %>
+    <br /><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :permission %>
+    <%= select_tag 'user[permission]', options_for_select(permissions_select_options, user.permission), multiple: true, class: 'form-control' %>
+    <br /><br />
+  </div>  
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
@@ -11,15 +33,19 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+    <br />
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+    <br />
   </div>
 
+  <%= f.hidden_field :admin %>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'btn btn-success' %>
   </div>
 <% end %>

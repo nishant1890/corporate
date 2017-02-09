@@ -39,7 +39,7 @@
         <td><%= erp_operating_expense.lindexed %></td>
         <td><%= erp_operating_expense.start_date %></td>
         <td><%= erp_operating_expense.end_date %></td>
-        <td><%= erp_operating_expense.company_id %></td>
+        <td><%= erp_operating_expense.company.name %></td>
         <td><%= link_to 'Show', erp_operating_expense %></td>
         <td><%= link_to 'Edit', edit_erp_operating_expense_path(erp_operating_expense) %></td>
         <td><%= link_to 'Destroy', erp_operating_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>

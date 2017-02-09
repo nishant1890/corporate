@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'users/new'
   post 'users/create'
 
+  devise_for :users
+
   resources :owner_salary_components
   resources :erp_operating_expenses
   resources :sunshine_center_other_expenses
@@ -15,8 +17,7 @@ Rails.application.routes.draw do
   resources :digital_marketing_datas
   resources :miscellaneous_expenses
   resources :companies
-
-  devise_for :users
+  resources :users
   
 
   get '/expenses_n_revenues', to: 'dashboards#expenses_n_revenues', as: :expenses_n_revenues

@@ -23,7 +23,7 @@
         <td><%= revenue.number_of_deals %></td>
         <td><%= revenue.amount %></td>
         <td><%= revenue.date %></td>
-        <td><%= revenue.company_id %></td>
+        <td><%= revenue.company.name %></td>
         <td><%= link_to 'Show', revenue %></td>
         <td><%= link_to 'Edit', edit_revenue_path(revenue) %></td>
         <td><%= link_to 'Destroy', revenue, method: :delete, data: { confirm: 'Are you sure?' } %></td>

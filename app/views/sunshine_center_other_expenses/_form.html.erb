@@ -12,6 +12,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :company %>
+    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name, sunshine_center_other_expense.company_id), class: 'form-control' %>
+    <br /><br />
+  </div>
+
+  <div class="field">
     <%= f.label :hosting %>
     <%= f.text_field :hosting, class: 'form-control' %>
     <br />
@@ -94,8 +100,6 @@
     <%= f.date_field :end_date, class: 'form-control' %>
     <br />
   </div>
-
-  <%= hidden_field_tag 'sunshine_center_other_expense[company_id]', current_user.company_id %>
 
   <div class="actions">
      <%= f.submit 'Submit', class: 'btn btn-success' %>

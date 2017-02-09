@@ -1,0 +1,19 @@
+ 
+
+<p>
+  <strong>Company:</strong>
+  <%= @user.company.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Permission:</strong>
+  <%= @user.permission.map{|p| p.sub('can_', '').humanize}.join(', ') %>
+</p>
+
+<hr /><%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

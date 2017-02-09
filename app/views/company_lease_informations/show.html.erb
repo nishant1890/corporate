@@ -2,7 +2,7 @@
 
 <p>
   <strong>House:</strong>
-  <%= @company_lease_information.house_id %>
+  <%= @company_lease_information.house.address %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @company_lease_information.company_id %>
+  <%= @company_lease_information.company.name %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_company_lease_information_path(@company_lease_information) %> |

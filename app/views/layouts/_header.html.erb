@@ -32,7 +32,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configurations<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <% ['owner_salary_components', 'erp_operating_expenses', 'sunshine_center_other_expenses', 'utility_expenses', 'marketing_fixed_expenses', 'company_lease_informations', 'houses', 'revenues', 'payroll_datas', 'digital_marketing_datas', 'miscellaneous_expenses'].sort.each do |object| %>
-                <% if current_user.permission == "can_manage_#{object}" || current_user.admin? %>
+                <% if current_user.permission.include?("can_manage_#{object}") || current_user.admin? %>
                   <li><%= link_to object.humanize, send("#{object}_path") %></li>
                 <% end %>
               <% end %>
@@ -44,7 +44,8 @@
               <ul class="dropdown-menu">
                 <li><a href="/users/edit">Profile</a></li>
                 <% if current_user.admin? %>
-                  <li><a href="/companies">Manage Companies</a></li>            
+                  <li><a href="/companies">Manage Companies</a></li>
+                  <li><a href="/users">Manage Users</a></li>            
                 <% end %>  
                 <li class="divider"></li>
                 <li><a href="/users/sign_out" data-method='delete'>Log Out</a></li>

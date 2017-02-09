@@ -41,7 +41,7 @@
         <td><%= utility_expense.total_per_house %></td>
         <td><%= utility_expense.start_date %></td>
         <td><%= utility_expense.end_date %></td>
-        <td><%= utility_expense.company_id %></td>
+        <td><%= utility_expense.company.name %></td>
         <td><%= link_to 'Show', utility_expense %></td>
         <td><%= link_to 'Edit', edit_utility_expense_path(utility_expense) %></td>
         <td><%= link_to 'Destroy', utility_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>

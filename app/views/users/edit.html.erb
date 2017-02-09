@@ -1,0 +1,6 @@
+<h1>Editing User</h1>
+
+<%= render 'form', user: @user, path: user_path(@user), method: 'put' %>
+
+<hr /><%= link_to 'Show', users_path(@user) %> |
+<%= link_to 'Back', users_path %>

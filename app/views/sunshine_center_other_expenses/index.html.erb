@@ -41,7 +41,7 @@
         <td><%= sunshine_center_other_expense.miscellaneous %></td>
         <td><%= sunshine_center_other_expense.start_date %></td>
         <td><%= sunshine_center_other_expense.end_date %></td>
-        <td><%= sunshine_center_other_expense.company_id %></td>
+        <td><%= sunshine_center_other_expense.company.name %></td>
         <td><%= link_to 'Show', sunshine_center_other_expense %></td>
         <td><%= link_to 'Edit', edit_sunshine_center_other_expense_path(sunshine_center_other_expense) %></td>
         <td><%= link_to 'Destroy', sunshine_center_other_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
