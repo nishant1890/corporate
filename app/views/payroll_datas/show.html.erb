@@ -2,7 +2,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @payroll_data.company.name %>
+  <%= @payroll_data.company.try(:name) %>
 </p>
 
 <p>

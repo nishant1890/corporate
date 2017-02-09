@@ -7,7 +7,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @house.company.name %>
+  <%= @house.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_house_path(@house) %> |

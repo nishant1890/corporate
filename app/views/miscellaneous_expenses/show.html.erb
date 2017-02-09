@@ -2,7 +2,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @miscellaneous_expense.company.name %>
+  <%= @miscellaneous_expense.company.try(:name) %>
 </p>
 
 <p>

@@ -16,7 +16,7 @@
   <tbody>
     <% @miscellaneous_expenses.each do |miscellaneous_expense| %>
       <tr>
-        <td><%= miscellaneous_expense.company.name %></td>
+        <td><%= miscellaneous_expense.company.try(:name) %></td>
         <td><%= miscellaneous_expense.month %></td>
         <td><%= miscellaneous_expense.year %></td>
         <td><%= miscellaneous_expense.miscellaneous_expense_type %></td>

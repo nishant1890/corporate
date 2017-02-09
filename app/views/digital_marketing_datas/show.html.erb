@@ -2,7 +2,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @digital_marketing_data.company.name %>
+  <%= @digital_marketing_data.company.try(:name) %>
 </p>
 
 <p>

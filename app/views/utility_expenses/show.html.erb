@@ -72,7 +72,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @utility_expense.company.name %>
+  <%= @utility_expense.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_utility_expense_path(@utility_expense) %> |

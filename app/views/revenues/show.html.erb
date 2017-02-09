@@ -27,7 +27,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @revenue.company.name %>
+  <%= @revenue.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_revenue_path(@revenue) %> |

@@ -43,7 +43,7 @@
         <td><%= marketing_fixed_expense.facebook %></td>
         <td><%= marketing_fixed_expense.start_date %></td>
         <td><%= marketing_fixed_expense.end_date %></td>
-        <td><%= marketing_fixed_expense.company.name %></td>
+        <td><%= marketing_fixed_expense.company.try(:name) %></td>
         <td><%= link_to 'Show', marketing_fixed_expense %></td>
         <td><%= link_to 'Edit', edit_marketing_fixed_expense_path(marketing_fixed_expense) %></td>
         <td><%= link_to 'Destroy', marketing_fixed_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>

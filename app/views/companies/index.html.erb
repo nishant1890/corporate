@@ -15,7 +15,7 @@
   <tbody>
     <% @companies.each do |company| %>
       <tr>
-        <td><%= company.name %></td>
+        <td><%= company.try(:name) %></td>
         <td><%= company.website %></td>
         <td><%= company.contact %></td>
         <td><%= link_to 'Show', company %></td>

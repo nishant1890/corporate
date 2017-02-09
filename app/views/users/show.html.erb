@@ -2,7 +2,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @user.company.name %>
+  <%= @user.company.try(:name) %>
 </p>
 
 <p>

@@ -16,7 +16,7 @@
   <tbody>
     <% @digital_marketing_datas.each do |digital_marketing_data| %>
       <tr>
-        <td><%= digital_marketing_data.company.name %></td>
+        <td><%= digital_marketing_data.company.try(:name) %></td>
         <td><%= digital_marketing_data.date %></td>
         <td><%= digital_marketing_data.amount %></td>
         <td><%= digital_marketing_data.search_engine %></td>

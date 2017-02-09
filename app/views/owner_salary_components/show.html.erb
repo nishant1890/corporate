@@ -32,7 +32,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @owner_salary_component.company.name %>
+  <%= @owner_salary_component.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_owner_salary_component_path(@owner_salary_component) %> |

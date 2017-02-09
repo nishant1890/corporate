@@ -25,7 +25,7 @@
         <td><%= owner_salary_component.spouse_commission %></td>
         <td><%= owner_salary_component.start_date %></td>
         <td><%= owner_salary_component.end_date %></td>
-        <td><%= owner_salary_component.company.name %></td>
+        <td><%= owner_salary_component.company.try(:name) %></td>
         <td><%= link_to 'Show', owner_salary_component %></td>
         <td><%= link_to 'Edit', edit_owner_salary_component_path(owner_salary_component) %></td>
         <td><%= link_to 'Destroy', owner_salary_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>

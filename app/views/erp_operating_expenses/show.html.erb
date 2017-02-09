@@ -67,7 +67,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @erp_operating_expense.company.name %>
+  <%= @erp_operating_expense.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_erp_operating_expense_path(@erp_operating_expense) %> |

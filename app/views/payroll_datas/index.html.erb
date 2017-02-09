@@ -16,7 +16,7 @@
   <tbody>
     <% @payroll_datas.each do |payroll_data| %>
       <tr>
-        <td><%= payroll_data.company.name %></td>
+        <td><%= payroll_data.company.try(:name) %></td>
         <td><%= payroll_data.date %></td>
         <td><%= payroll_data.amount %></td>
         <td><%= payroll_data.payroll_type %></td>

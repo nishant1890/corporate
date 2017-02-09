@@ -22,7 +22,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @company_lease_information.company.name %>
+  <%= @company_lease_information.company.try(:name) %>
 </p>
 
 <hr /><%= link_to 'Edit', edit_company_lease_information_path(@company_lease_information) %> |
