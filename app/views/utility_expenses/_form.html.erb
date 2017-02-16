@@ -19,79 +19,79 @@
 
   <div class="field">
     <%= f.label :cable %>
-    <%= f.text_field :cable, class: 'form-control' %>
+    <%= f.number_field :cable, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :gas %>
-    <%= f.text_field :gas, class: 'form-control' %>
+    <%= f.number_field :gas, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :electric %>
-    <%= f.text_field :electric, class: 'form-control' %>
+    <%= f.number_field :electric, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :water %>
-    <%= f.text_field :water, class: 'form-control' %>
+    <%= f.number_field :water, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :food %>
-    <%= f.text_field :food, class: 'form-control' %>
+    <%= f.number_field :food, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <label>Yoga/Meds</label>
-    <%= f.text_field :yoga, class: 'form-control' %>
+    <%= f.number_field :yoga, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :acupunture %>
-    <%= f.text_field :acupunture, class: 'form-control' %>
+    <%= f.number_field :acupunture, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :auto %>
-    <%= f.text_field :auto, class: 'form-control' %>
+    <%= f.number_field :auto, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :fuel %>
-    <%= f.text_field :fuel, class: 'form-control' %>
+    <%= f.number_field :fuel, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :landscaping %>
-    <%= f.text_field :landscaping, class: 'form-control' %>
+    <%= f.number_field :landscaping, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :cleaning %>
-    <%= f.text_field :cleaning, class: 'form-control' %>
+    <%= f.number_field :cleaning, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :nutritionist %>
-    <%= f.text_field :nutritionist, class: 'form-control' %>
+    <%= f.number_field :nutritionist, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
     <%= f.label :total_per_house %>
-    <%= f.text_field :total_per_house, class: 'form-control' %>
+    <%= f.text_field :total_per_house, class: 'form-control', readonly: true %>
     <br />
   </div>
 
@@ -115,4 +115,9 @@
 <script type="text/javascript">
   $('#utility_expense_start_date').datepicker({format: 'dd/mm/yyyy'})
   $('#utility_expense_end_date').datepicker({format: 'dd/mm/yyyy'})
+
+  $('input').on('change', function(){
+    var totalPerHouse = parseInt($('#utility_expense_cable').val()) + parseInt($('#utility_expense_gas').val()) + parseInt($('#utility_expense_electric').val()) + parseInt($('#utility_expense_water').val()) + parseInt($('#utility_expense_food').val()) + parseInt($('#utility_expense_yoga').val()) + parseInt($('#utility_expense_acupunture').val()) + parseInt($('#utility_expense_auto').val()) + parseInt($('#utility_expense_fuel').val()) + parseInt($('#utility_expense_landscaping').val()) + parseInt($('#utility_expense_cleaning').val()) + parseInt($('#utility_expense_nutritionist').val())
+    $('#utility_expense_total_per_house').val(totalPerHouse)
+  })
 </script>
