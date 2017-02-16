@@ -70,6 +70,6 @@ class MiscellaneousExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def miscellaneous_expense_params
-      params.require(:miscellaneous_expense).permit(:miscellaneous_expense_type, :month, :year, :company_id)
+      params.require(:miscellaneous_expense).permit(:miscellaneous_expense_type, :amount, :date, :company_id)
     end
 end

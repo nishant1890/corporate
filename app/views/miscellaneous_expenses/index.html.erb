@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Company</th>
-      <th>Month</th>
-      <th>Year</th>
+      <th>Amount</th>
+      <th>Date</th>
       <th>Miscellaneous expense type</th>
       <th colspan="3">Actions</th>
     </tr>
@@ -17,8 +17,8 @@
     <% @miscellaneous_expenses.each do |miscellaneous_expense| %>
       <tr>
         <td><%= miscellaneous_expense.company.try(:name) %></td>
-        <td><%= miscellaneous_expense.month %></td>
-        <td><%= miscellaneous_expense.year %></td>
+        <td><%= miscellaneous_expense.amount %></td>
+        <td><%= miscellaneous_expense.date %></td>
         <td><%= miscellaneous_expense.miscellaneous_expense_type %></td>
         <td><%= link_to 'Show', miscellaneous_expense_path(miscellaneous_expense) %></td>
         <td><%= link_to 'Edit', edit_miscellaneous_expense_path(miscellaneous_expense) %></td>

@@ -17,16 +17,20 @@
   </div>
   
   <div class="field">
-    <%= f.label :year %>
-    <%= f.number_field :year, class: 'form-control', maximum: 4, minimum: 4 %>
+    <%= f.label :amount %>
+    <%= f.number_field :amount, class: 'form-control' %>
     <br />
   </div>
 
   <div class="field">
-    <%= f.label :month %>
-    <%= f.select :month, options_for_select(%w(Jan Feb March April May June July August Sept Oct Nov Dec), miscellaneous_expense.month), class: 'form-control' %>
-    <br /><br />
-  </div>
+    <%= f.label :date %>
+    <%= f.text_field :date, class: 'form-control' %>
+    <br />
+  </div>  
+
+  <script type="text/javascript">
+    $('#miscellaneous_expense_date').datepicker({format: 'dd/mm/yyyy'})
+  </script>
 
   <div class="field">
     <%= f.label :miscellaneous_expense_type %>

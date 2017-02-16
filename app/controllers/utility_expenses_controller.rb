@@ -70,6 +70,6 @@ class UtilityExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def utility_expense_params
-      params.require(:utility_expense).permit(:cable, :gas, :electric, :water, :food, :yoga, :acupunture, :auto, :fuel, :landscaping, :cleaning, :total_per_house, :start_date, :end_date, :company_id)
+      params.require(:utility_expense).permit(:cable, :gas, :electric, :water, :food, :yoga, :acupunture, :auto, :fuel, :landscaping, :cleaning, :total_per_house, :start_date, :end_date, :company_id, :nutritionist)
     end
 end
