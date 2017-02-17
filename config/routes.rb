@@ -27,7 +27,9 @@ Rails.application.routes.draw do
   resources :companies do
     member do 
       get '/revenues-n-expenses/year-selection', to: 'companies#revenues_year_selection'
-      get '/:year/revenues-n-expenses', to: 'companies#yearly_revenue_n_expenses'
+      get '/:year/monthwise-revenues-n-expenses', to: 'companies#yearly_revenue_n_expenses', as: :monthwise_revenue_figures
+      get '/:month/monthly-revenues-n-expenses', to: 'companies#monthly_revenue_n_expenses', as: :month_revenue_figures
+
     end
   end
   

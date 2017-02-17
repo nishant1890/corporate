@@ -4,7 +4,7 @@
 <table class="table">  
   <% [2017, 2018, 2019, 2020].each do |year| %>
     <tr>
-      <td><%= link_to year, "/companies/#{@company.id}/#{year}/monthwise-revenues-n-expenses" %></td>
+      <td><%= link_to year, monthwise_revenue_figures_company_url(@company.id, year) %></td>
     </tr>
   <% end %>  
 </table>
