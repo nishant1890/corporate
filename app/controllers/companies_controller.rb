@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :check_if_user_is_admin
-  before_action :set_company, only: [:show, :edit, :update, :destroy, :revenues_year_selection, :yearly_revenue_n_expenses]
+  before_action :set_company, only: [:show, :edit, :update, :destroy, :revenues_year_selection, :yearly_revenue_n_expenses, :monthly_revenue_n_expenses]
 
   # GET /companies
   # GET /companies.json
@@ -69,7 +69,7 @@ class CompaniesController < ApplicationController
   end
 
   def monthly_revenue_n_expenses
-    
+
   end
 
   private

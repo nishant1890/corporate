@@ -1,0 +1,89 @@
+<center><h1><%= @company.name %></h1></center>
+
+<center><h2><%= Date::MONTHNAMES[params[:month].to_i] %>, <%= params[:year] %></h2></center>
+
+<hr />
+
+<div class="col-lg-6">
+  <% closed_won_deals = Revenue.close_down_deals_count(params[:month].to_i, params[:year].to_i) %>
+  <p>
+    <strong>Payroll Total:</strong>
+    <%= closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Closed Won Deals:</strong>
+    <%= closed_won_deals %> $
+  </p>
+
+  <p>
+    <strong>Marketing Total:</strong>
+    <%= marketing_total = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Fixed Cost Total:</strong>
+    <%= fixed_cost = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Total Expenses:</strong>
+    <%= total_expenses = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Owner Salary Total:</strong>
+    <%= owner_salary_total = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+</div>
+<div class="col-lg-6">
+  <p>
+    <strong>Revenue ERP:</strong>
+    <%= revenue_erp = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Revenue From Monarch:</strong>
+    <%=  revenue_monarch = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Revenue From CC:</strong>
+    <%=  revenue_cc = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Revenue From WSR:</strong>
+    <%=  revenue_wsr = closed_won_deals == 0 ? 0 : Random.rand(100000) %> $
+  </p>
+
+  <p>
+    <strong>Total Revenue:</strong>
+    <%= total_revenue = revenue_monarch + revenue_erp + revenue_wsr + revenue_cc %> $
+  </p>
+</div>
+
+
+
+<div class="col-lg-12">
+  <hr />
+  <p>
+    <strong>Total Profit:</strong>
+    <%= total_profit = total_revenue - total_expenses %> $
+  </p>
+
+  <p>
+    <strong>Total Profit per Closed Won Deal:</strong>
+    <%= total_profit_per_deal = closed_won_deals == 0 ? 0 : total_profit / closed_won_deals %> $
+  </p>
+
+  <p>
+    <strong>Total Revenue per Closed Won Deal:</strong>
+    <%= total_revenue_per_deal = closed_won_deals == 0 ? 0 : total_revenue / closed_won_deals %> $
+  </p>
+
+  <p>
+    <strong>Marketing ROI:</strong>
+    <%= closed_won_deals == 0 ? 0 : total_revenue / Random.rand(100000) %> $
+  </p>
+</div>
