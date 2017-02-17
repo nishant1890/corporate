@@ -24,7 +24,12 @@ Rails.application.routes.draw do
   resources :payroll_datas
   resources :digital_marketing_datas
   resources :miscellaneous_expenses
-  resources :companies
+  resources :companies do
+    member do 
+      get '/revenues-n-expenses/year-selection', to: 'companies#revenues_year_selection'
+      get '/:year/revenues-n-expenses', to: 'companies#yearly_revenue_n_expenses'
+    end
+  end
   
   
   namespace :api do

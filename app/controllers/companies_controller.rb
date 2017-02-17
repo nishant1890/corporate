@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :check_if_user_is_admin
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [:show, :edit, :update, :destroy, :revenues_year_selection, :yearly_revenue_n_expenses]
 
   # GET /companies
   # GET /companies.json
@@ -60,6 +60,13 @@ class CompaniesController < ApplicationController
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def revenues_year_selection
+  end
+
+  def yearly_revenue_n_expenses
+
   end
 
   private

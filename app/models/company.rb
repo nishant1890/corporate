@@ -5,7 +5,6 @@ class Company < ApplicationRecord
 
   has_many :revenues
   
-  def calculate_month_expenses(month, year)
-    
-  end
+  # def monthly_marketing_expenses(month, year)
+  #   DigitalMarketingExpense.where()
 end

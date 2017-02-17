@@ -1,0 +1,136 @@
+<center><h1><%= @company.name %></h1></center>
+<hr />
+
+<table class="table table-bordered">  
+  <tr>
+    <th>Month</th>
+    <th>Revenue</th>
+    <th>Closed Won Total</th>
+    <th>Marketing</th>
+    <th>Marketing Per CW</th>
+    <th>Expenses</th>
+    <th>Profit</th>
+    <th>ROI</th>
+  </tr>
+  <tr>
+    <td><%= link_to "Jan", "companies/#{@company.id}/01/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(1, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(1, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Feb", "companies/#{@company.id}/02/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(2, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(2, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Mar", "companies/#{@company.id}/03/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(3, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(3, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Apr", "companies/#{@company.id}/04/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(4, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(4, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "May", "companies/#{@company.id}/05/revenues-n-expenses" %></td>
+    
+    <td><%= Revenue.revenue_for_a_month(5, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(5, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Jun", "companies/#{@company.id}/06/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(6, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(6, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Jul", "companies/#{@company.id}/07/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(7, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(7, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Aug", "companies/#{@company.id}/08/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(8, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(8, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Sep", "companies/#{@company.id}/09/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(9, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(9, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Oct", "companies/#{@company.id}/10/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(10, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(10, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Nov", "companies/#{@company.id}/11/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(11, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(11, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Dec", "companies/#{@company.id}/12/revenues-n-expenses" %></td>
+    <td><%= Revenue.revenue_for_a_month(12, params[:year]) + Random.rand(100000) %></td>
+    <td><%= Revenue.close_down_deals_count(12, params[:year])  + Random.rand(100) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+    <td><%= Random.rand(100000) %></td>
+  </tr>
+</table>

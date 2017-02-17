@@ -1,0 +1,10 @@
+<center><h1><%= @company.name %></h1></center>
+<hr />
+
+<table class="table">  
+  <% [2017, 2018, 2019, 2020].each do |year| %>
+    <tr>
+      <td><%= link_to year, "/companies/#{@company.id}/#{year}/revenues-n-expenses" %></td>
+    </tr>
+  <% end %>  
+</table>
