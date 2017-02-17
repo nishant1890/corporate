@@ -1,55 +1,55 @@
  
 
 <h1>Sunshine Center Other Expenses</h1>
-
-<table class="table table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>Hosting</th>
-      <th>Blogging</th>
-      <th>Facebook</th>
-      <th>Liability insurance</th>
-      <th>Heath insurance</th>
-      <th>Detox</th>
-      <th>Workers compensation</th>
-      <th>Fica</th>
-      <th>Office supplies</th>
-      <th>Cort</th>
-      <th>Kipu</th>
-      <th>Miscellaneous</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Company</th>
-      <th colspan="3">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sunshine_center_other_expenses.each do |sunshine_center_other_expense| %>
+<div class="table-responsive">
+  <table class="table table-bordered table-responsive">
+    <thead>
       <tr>
-        <td><%= sunshine_center_other_expense.hosting %></td>
-        <td><%= sunshine_center_other_expense.blogging %></td>
-        <td><%= sunshine_center_other_expense.facebook %></td>
-        <td><%= sunshine_center_other_expense.liability_insurance %></td>
-        <td><%= sunshine_center_other_expense.heath_insurance %></td>
-        <td><%= sunshine_center_other_expense.detox %></td>
-        <td><%= sunshine_center_other_expense.workers_compensation %></td>
-        <td><%= sunshine_center_other_expense.fica %></td>
-        <td><%= sunshine_center_other_expense.office_supplies %></td>
-        <td><%= sunshine_center_other_expense.cort %></td>
-        <td><%= sunshine_center_other_expense.kipu %></td>
-        <td><%= sunshine_center_other_expense.miscellaneous %></td>
-        <td><%= sunshine_center_other_expense.start_date %></td>
-        <td><%= sunshine_center_other_expense.end_date %></td>
-        <td><%= sunshine_center_other_expense.company.try(:name) %></td>
-        <td><%= link_to 'Show', sunshine_center_other_expense %></td>
-        <td><%= link_to 'Edit', edit_sunshine_center_other_expense_path(sunshine_center_other_expense) %></td>
-        <td><%= link_to 'Destroy', sunshine_center_other_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Hosting</th>
+        <th>Blogging</th>
+        <th>Facebook</th>
+        <th>Liability insurance</th>
+        <th>Heath insurance</th>
+        <th>Detox</th>
+        <th>Workers compensation</th>
+        <th>Fica</th>
+        <th>Office supplies</th>
+        <th>Cort</th>
+        <th>Kipu</th>
+        <th>Miscellaneous</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Company</th>
+        <th colspan="3">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @sunshine_center_other_expenses.each do |sunshine_center_other_expense| %>
+        <tr>
+          <td><%= sunshine_center_other_expense.hosting %></td>
+          <td><%= sunshine_center_other_expense.blogging %></td>
+          <td><%= sunshine_center_other_expense.facebook %></td>
+          <td><%= sunshine_center_other_expense.liability_insurance %></td>
+          <td><%= sunshine_center_other_expense.heath_insurance %></td>
+          <td><%= sunshine_center_other_expense.detox %></td>
+          <td><%= sunshine_center_other_expense.workers_compensation %></td>
+          <td><%= sunshine_center_other_expense.fica %></td>
+          <td><%= sunshine_center_other_expense.office_supplies %></td>
+          <td><%= sunshine_center_other_expense.cort %></td>
+          <td><%= sunshine_center_other_expense.kipu %></td>
+          <td><%= sunshine_center_other_expense.miscellaneous %></td>
+          <td><%= sunshine_center_other_expense.start_date %></td>
+          <td><%= sunshine_center_other_expense.end_date %></td>
+          <td><%= sunshine_center_other_expense.company.try(:name) %></td>
+          <td><%= link_to 'Show', sunshine_center_other_expense %></td>
+          <td><%= link_to 'Edit', edit_sunshine_center_other_expense_path(sunshine_center_other_expense) %></td>
+          <td><%= link_to 'Destroy', sunshine_center_other_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <hr /><%= link_to 'New Sunshine Center Other Expense', new_sunshine_center_other_expense_path %>
