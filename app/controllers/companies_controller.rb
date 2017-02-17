@@ -66,7 +66,10 @@ class CompaniesController < ApplicationController
   end
 
   def yearly_revenue_n_expenses
+  end
 
+  def monthly_revenue_n_expenses
+    
   end
 
   private
