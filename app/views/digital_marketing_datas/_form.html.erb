@@ -18,7 +18,7 @@
   
   <div class="field">
     <%= f.label :date %>
-    <%= f.text_field :date, class: 'form-control' %>
+    <%= f.text_field :date, class: 'form-control', required: true %>
     <br />
   </div>
 
@@ -39,6 +39,6 @@
   </div>
 <% end %>
 <script type="text/javascript">
-  $('#digital_marketing_data_date').datepicker({format: 'dd/mm/yyyy'})
+  $('#digital_marketing_data_date').datepicker({dateFormat: 'dd/mm/yy'})
   
 </script>

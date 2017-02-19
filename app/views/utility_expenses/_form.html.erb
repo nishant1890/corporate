@@ -113,8 +113,8 @@
 <% end %>
 
 <script type="text/javascript">
-  $('#utility_expense_start_date').datepicker({format: 'dd/mm/yyyy'})
-  $('#utility_expense_end_date').datepicker({format: 'dd/mm/yyyy'})
+  $('#utility_expense_start_date').datepicker({dateFormat: 'dd/mm/yy'})
+  $('#utility_expense_end_date').datepicker({dateFormat: 'dd/mm/yy'})
 
   $('input').on('change', function(){
     var totalPerHouse = parseInt($('#utility_expense_cable').val()) + parseInt($('#utility_expense_gas').val()) + parseInt($('#utility_expense_electric').val()) + parseInt($('#utility_expense_water').val()) + parseInt($('#utility_expense_food').val()) + parseInt($('#utility_expense_yoga').val()) + parseInt($('#utility_expense_acupunture').val()) + parseInt($('#utility_expense_auto').val()) + parseInt($('#utility_expense_fuel').val()) + parseInt($('#utility_expense_landscaping').val()) + parseInt($('#utility_expense_cleaning').val()) + parseInt($('#utility_expense_nutritionist').val())
