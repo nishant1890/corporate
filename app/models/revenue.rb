@@ -13,6 +13,6 @@ class Revenue < ApplicationRecord
 
   def self.close_down_deals_count(month, year)
     revenue_objects =  revenue_objects_for_a_month(month, year)
-    revenue_objects.map{|r| r.no_of_deals.to_i}.sum
+    revenue_objects.map{|r| r.number_of_deals.to_i}.sum
   end 
 end
