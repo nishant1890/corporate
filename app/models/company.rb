@@ -32,7 +32,7 @@ class Company < ApplicationRecord
     if close_won_deals == 0
       0.0
     else
-      marketing_expenses / close_won_deals
+      (marketing_expenses / close_won_deals).round(2)
     end
   end
 
