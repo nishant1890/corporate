@@ -5,7 +5,6 @@
 <table class="table table-bordered table-responsive">
   <thead>
     <tr>
-      <th>Company name</th>
       <th>Type of revenue</th>
       <th>Number of deals</th>
       <th>Amount</th>
@@ -18,7 +17,6 @@
   <tbody>
     <% @revenues.each do |revenue| %>
       <tr>
-        <td><%= revenue.company_name %></td>
         <td><%= revenue.type_of_revenue %></td>
         <td><%= revenue.number_of_deals %></td>
         <td><%= revenue.amount %></td>
