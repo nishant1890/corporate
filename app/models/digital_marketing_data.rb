@@ -4,7 +4,7 @@ class DigitalMarketingData < Expense
   belongs_to :company
 
   def self.objects_for_a_month(month, year, company)
-    where({date: (Date.new(year.to_i, month).beginning_of_month..Date.new(year.to_i, month).end_of_month).to_a, company_id: company.id})
+    where({date: (Date.new(year.to_i, month.to_i).beginning_of_month..Date.new(year.to_i, month.to_i).end_of_month).to_a, company_id: company.id})
   end
 
   def self.expenses_for_a_month(month, year)
