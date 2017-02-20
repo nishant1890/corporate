@@ -4,6 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  belongs_to :company
-  validates :company_id, presence: true, if: '!admin?'
+  has_and_belongs_to_many :companies
 end

@@ -1,8 +1,8 @@
 class Company < ApplicationRecord
   validates_presence_of :name
     
-  validates :contact, length: {minimum: 9, maximum: 9}
-
+  validates :contact, length: {minimum: 10, maximum: 10}
+  has_and_belongs_to_many :users
   has_many :revenues
   has_many :houses
     

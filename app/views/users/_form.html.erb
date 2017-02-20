@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= f.label :company %>
-    <%= f.select :company_id, options_from_collection_for_select(Company.all, :id, :name, user.company_id), class: 'form-control' %>
+    <%= select_tag 'user[company_id]', options_from_collection_for_select(Company.all, :id, :name, user.companies.map(&:id)), class: 'form-control', multiple: true %>
     <br /><br />
   </div>
 

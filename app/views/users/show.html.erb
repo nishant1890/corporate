@@ -2,7 +2,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @user.company.try(:name) %>
+  <%= @user.companies.map{|c| c.name}.join(', ') %>
 </p>
 
 <p>
