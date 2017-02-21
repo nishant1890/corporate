@@ -39,17 +39,30 @@
   
 </div>
 <div class="col-lg-6">
-  <% Company.all.each do |company| %>
+  <% if @company.name == 'Elite Rehab Placement' %>
+    <% Company.all.each do |company| %>
+      <p>
+        <strong>Revenue <%= company.name.scan(/(\A\w|(?<=\s)\w)/).flatten.join %>:</strong>
+        <%= company_revenue(company) %> $
+      </p>
+    <% end %>
+      
     <p>
-      <strong>Revenue <%= company.name.scan(/(\A\w|(?<=\s)\w)/).flatten.join %>:</strong>
-      <%= company_revenue(company) %> $
+      <strong>Total Revenue:</strong>
+      <%= total_revenue = Company.all.each_with_object([]) {|company, a| a << company_revenue(company)}.sum %> $
     </p>
-  <% end %>
+  
+  <% else %>
+    <p>
+      <strong>Revenue <%= @company.name.scan(/(\A\w|(?<=\s)\w)/).flatten.join %>:</strong>
+      <%= company_revenue(@company) %> $
+    </p>
     
-  <p>
-    <strong>Total Revenue:</strong>
-    <%= total_revenue = Company.all.each_with_object([]) {|company, a| a << company_revenue(company)}.sum %> $
-  </p>
+    <p>
+      <strong>Total Revenue:</strong>
+      <%= total_revenue = company_revenue(@company) %> $
+    </p>
+  <% end %>    
 </div>
 
 
