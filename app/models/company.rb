@@ -53,7 +53,7 @@ class Company < ApplicationRecord
   end
 
   def erp_revenue_for_month(month, year)
-    Revenue.revenue_for_a_month(self, month, year) + (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Monarch Shores'), month, year)) +  (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Willow Springs Recovery'), month, year)) + (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Solid Landings'), month, year))
+    Revenue.revenue_for_a_month(self, month, year) + (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Monarch Shores'), month, year)) +  (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Willow Springs Recovery'), month, year)) + (0.25 * Revenue.revenue_for_a_month(Company.find_by(name: 'Chapters Capistrano'), month, year))
   end
 
   def erp_expenses_for_month(month, year)
@@ -91,5 +91,27 @@ class Company < ApplicationRecord
 
   def owner_salary_total(month, year)
     OwnerSalaryComponent.owner_salary_for_month(month, year, self) + OwnerSalaryComponent.owner_commission_for_month(month, year, self)
+  end
+
+  def erp_fixed_total(month, year)
+    erp_operating_expenses = ErpOperatingExpense.expenses_for_month(month, year, self)
+    erp_employee_payroll_expenses = erp_employee_payroll_expenses_for_month(month, year)
+    erp_operating_expenses + (erp_employee_payroll_expenses * 0.075) + (erp_employee_payroll_expenses * 0.1) + MiscellaneousExpense.expenses_for_month(month, year, self)
+  end
+
+  def non_erp_fixed_total(month, year)
+    lease_amount = CompanyLeaseInformation.objects_for_a_month(month, year, self).map{|l| l.total_lease_amount.to_i}.sum
+    sc_other_expenses = SunshineCenterOtherExpense.expenses_for_month(month, year, self)
+    sc_utility_expenses = UtilityExpense.expenses_for_month(month, year, self)
+
+    lease_amount + (sc_utility_expenses * self.houses.count) + sc_other_expenses
+  end
+
+  def fixed_total(month, year)
+    if self.name == 'Elite Rehab Placement'
+      self.erp_fixed_total(month, year)
+    else
+      self.non_erp_fixed_total(month, year)
+    end
   end
 end
