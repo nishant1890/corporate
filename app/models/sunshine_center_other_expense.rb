@@ -10,7 +10,7 @@ class SunshineCenterOtherExpense < ApplicationRecord
     objects = objects_for_a_month(month, year, company)
     objects.each_with_object([]) do |e, a|
       a << e.hosting.try(:to_i)
-      a << blogging.try(:to_i)
+      a << e.blogging.try(:to_i)
       a << e.facebook.try(:to_i)
       a << e.liability_insurance.try(:to_i)
       a << e.heath_insurance.try(:to_i)
