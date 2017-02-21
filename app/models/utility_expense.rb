@@ -9,7 +9,7 @@ class UtilityExpense < ApplicationRecord
     objects = objects_for_a_month(month, year, company)
     objects.each_with_object([]) do |e, a|
       a << e.gas.try(:to_i)
-      a << electric.try(:to_i)
+      a << e.electric.try(:to_i)
       a << e.water.try(:to_i)
       a << e.food.try(:to_i)
       a << e.yoga.try(:to_i)
